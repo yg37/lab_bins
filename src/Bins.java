@@ -11,20 +11,24 @@ import java.util.Scanner;
  */
 public class Bins {
     public static final String DATA_FILE = "example.txt";
-
+    private List<Integer> results
     /**
      * Reads list of integer data from the given input.
      *
      * @param input tied to an input source that contains space separated numbers
-     * @return list of the numbers in the order they were read
+     * 
      */
-    public List<Integer> readData (Scanner input) {
+    public void readData (Scanner input) {
         List<Integer> results = new ArrayList<Integer>();
         while (input.hasNext()) {
             results.add(input.nextInt());
         }
-        return results;
     }
+
+    public  getData(){
+    	return results;
+    }
+    
 
     /**
      * The main program.
@@ -90,3 +94,4 @@ public class Bins {
         System.out.println();
     }
 }
+
