@@ -1,0 +1,27 @@
+
+Bins.java
+Readability:
+•	No comments in the main program, so the reader has a hard time figuring out the logic of the program. 
+
+Testability:
+•	Main method too long – 
+o	Write a new method that takes an array list of integers as input(i.e. output from readData method) and outputs disks that are created. In this way, each piece/method can be tested more easily by just calling the method instead of making changes to the main method every single time
+o	Maybe create a new class for the implementation of each algorithm instead of mixing it together
+•	Too many print statements in the main method makes debugging extremely difficulty
+
+
+Extensibility:
+•	Lack of instance variables – makes extending the class hard
+o	Can make results an instance variable so that it can accommodate potential read ins without erasing existing data
+o	  
+Disk.java
+Readability:
+•	Line 98 – confusing that the return result contains ID 
+Extensibility:
+•	Should set mySize to be a constant – avoid duplicate codes
+
+Refactors:
+Bins:
+•	Create an instance variable results
+•	Create a new method getData to get results
+•	Create two classes for each of the two algorithsm
